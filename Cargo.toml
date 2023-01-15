@@ -1,7 +1,15 @@
 [package]
 name = "tea-orm"
-version = "1.0.0"
+version = "0.2.0"
 edition = "2021"
+license = "MIT"
+description = "Helper functions for Sea Orm to help with testing"
+keywords = ["database", "testing", "test", "sea-orm", "sea_orm"]
+categories = ["database", "development-tools::testing"]
+authors = ["josephlenton@gmail.com <josephlenton@gmail.com>"]
+repository = "https://github.com/JosephLenton/tea-orm"
+readme = "README.md"
+documentation = "https://docs.rs/tea-orm/latest/tea-orm"
 
 [features]
 default = ["runtime-tokio-rustls"]

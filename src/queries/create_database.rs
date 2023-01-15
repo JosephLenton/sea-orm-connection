@@ -10,6 +10,10 @@ use ::std::fmt::Display;
 use crate::queries::is_alphanumeric_underscore_hyphen;
 use crate::queries::query_set_database;
 
+/// Runs a query which will create a new database with the given name.
+///
+/// After the Database is created, it will then run another query to
+/// switch the `DatabaseConnection` to use that new database.
 pub async fn query_create_database<S>(db_connection: &DatabaseConnection, name: &S) -> Result<()>
 where
     S: Display,
