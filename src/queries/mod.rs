@@ -7,8 +7,5 @@ pub use self::create_random_database::*;
 mod list_databases;
 pub use self::list_databases::*;
 
-mod set_database;
-pub use self::set_database::*;
-
 mod utils;
 pub(crate) use self::utils::*;

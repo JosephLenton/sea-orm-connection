@@ -7,9 +7,7 @@ const TEST_DATABASE_BASENAME: &'static str = "test-database";
 use crate::queries::query_create_database;
 
 /// Runs a query which will create a new database with a randomly generated name.
-///
-/// After the Database is created, it will then run another query to
-/// switch the `DatabaseConnection` to use that new database.
+/// The name of this new database will be returned.
 pub async fn query_create_random_database(db_connection: &DatabaseConnection) -> Result<String> {
     let db_name = random_db_name();
 

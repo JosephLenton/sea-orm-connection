@@ -56,7 +56,7 @@ mod query_list_databases {
             .await
             .unwrap();
         let dbs = query_list_databases(&db_connection).await.unwrap();
-        query_create_random_database(&db_connection).await.unwrap();
+        let new_database_name = query_create_random_database(&db_connection).await.unwrap();
         let new_dbs = query_list_databases(&db_connection).await.unwrap();
 
         // We expect the number of databases to have increased,
@@ -64,6 +64,8 @@ mod query_list_databases {
         //
         // However it's possible another test also created a DB at the same time.
         // Resulting in it going up at more than 1.
+        assert_eq!(dbs.contains(&new_database_name), false);
         assert!(dbs.len() < new_dbs.len());
+        assert_eq!(new_dbs.contains(&new_database_name), true);
     }
 }
