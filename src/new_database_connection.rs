@@ -54,6 +54,8 @@ pub async fn new_database_connection_with_options(
     if let Some(sqlx_logging_level) = options.sqlx_logging_level {
         opt.sqlx_logging(true)
             .sqlx_logging_level(sqlx_logging_level);
+    } else {
+        opt.sqlx_logging(false);
     }
 
     if let Some(min_connections) = options.min_connections {
