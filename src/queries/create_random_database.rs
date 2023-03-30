@@ -1,5 +1,6 @@
 use ::anyhow::Result;
 use ::names::Generator;
+use ::names::Name;
 use ::sea_orm::DatabaseConnection;
 
 const TEST_DATABASE_BASENAME: &'static str = "test-database";
@@ -17,7 +18,7 @@ pub async fn query_create_random_database(db_connection: &DatabaseConnection) ->
 }
 
 fn random_db_name() -> String {
-    let mut generator = Generator::default();
+    let mut generator = Generator::with_naming(Name::Numbered);
     let db_name = generator
         .next()
         .expect("Expect generating a name should always succeed");
