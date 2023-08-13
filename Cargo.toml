@@ -1,6 +1,6 @@
 [package]
 name = "tea-orm"
-version = "1.1.0"
+version = "2.0.0"
 edition = "2021"
 license = "MIT"
 description = "Helper functions for Sea Orm to help with testing"
@@ -22,11 +22,11 @@ runtime-tokio-native-tls = ["sea-orm/runtime-tokio-native-tls"]
 runtime-tokio-rustls = ["sea-orm/runtime-tokio-rustls"]
 
 [dependencies]
-anyhow = "1.0.71"
-log = { version = "0.4.17", features = ["serde"] }
+anyhow = "1.0"
+log = { version = "0.4", features = ["serde"] }
 names = "0.14.0"
-sea-orm = { version = "0.11.3", features = ["debug-print", "sqlx-postgres"] }
-serde = { version = "1.0.163", features = ["derive"] }
+sea-orm = { version = "0.12", features = ["debug-print", "sqlx-postgres"] }
+serde = { version = "1.0", features = ["derive"] }
 
 [dev-dependencies]
-tokio = { version = "1.28.1", features = ["macros"] }
+tokio = { version = "1.31", features = ["macros"] }
