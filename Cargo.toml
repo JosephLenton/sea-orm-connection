@@ -1,6 +1,6 @@
 [package]
 name = "tea-orm"
-version = "2.0.0"
+version = "2.1.0"
 edition = "2021"
 license = "MIT"
 description = "Helper functions for Sea Orm to help with testing"
@@ -25,7 +25,7 @@ runtime-tokio-rustls = ["sea-orm/runtime-tokio-rustls"]
 anyhow = "1.0"
 log = { version = "0.4", features = ["serde"] }
 names = "0.14.0"
-sea-orm = { version = "0.12", features = ["debug-print", "sqlx-postgres"] }
+sea-orm = { version = "1.0", features = ["debug-print", "sqlx-postgres"] }
 serde = { version = "1.0", features = ["derive"] }
 
 [dev-dependencies]
