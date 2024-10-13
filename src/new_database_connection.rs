@@ -1,11 +1,11 @@
-use ::anyhow::Result;
-use ::log::LevelFilter;
-use ::sea_orm::ConnectOptions;
-use ::sea_orm::Database;
-use ::sea_orm::DatabaseConnection;
-use ::serde::Deserialize;
-use ::serde::Serialize;
-use ::std::time::Duration;
+use anyhow::Result;
+use log::LevelFilter;
+use sea_orm::ConnectOptions;
+use sea_orm::Database;
+use sea_orm::DatabaseConnection;
+use serde::Deserialize;
+use serde::Serialize;
+use std::time::Duration;
 
 #[derive(Serialize, Deserialize, Clone, Debug)]
 pub struct DatabaseConnectionOptions {
